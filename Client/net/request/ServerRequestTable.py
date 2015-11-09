@@ -5,6 +5,20 @@ from net.request.RequestRandomString import RequestRandomString
 from net.request.RequestRandomShort import RequestRandomShort
 from net.request.RequestRandomFloat import RequestRandomFloat
 from net.request.RequestLogin import RequestLogin
+from net.request.RequestCreateCharacter import RequestCreateCharacter
+from net.request.RequestLogout import RequestLogout
+from net.request.RequestMove import RequestMove
+from net.request.RequestPowerUpUse import RequestPowerUpUse
+from net.request.RequestPowerUpPickUp import RequestPowerUpPickUp
+from net.request.RequestChangeHealth import RequestChangeHealth
+from net.request.RequestResults import RequestResults
+from net.request.RequestRankings import RequestRankings
+from net.request.RequestPrizes import RequestPrizes
+from net.request.RequestCollision import RequestCollision
+from net.request.RequestDead import RequestDead
+from net.request.RequestReady import RequestReady
+from net.request.RequestHeartbeat import RequestHeartbeat
+
 
 class ServerRequestTable:
     """

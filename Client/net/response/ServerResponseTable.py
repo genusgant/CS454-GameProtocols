@@ -5,6 +5,21 @@ from net.response.ResponseRandomString import ResponseRandomString
 from net.response.ResponseRandomShort import ResponseRandomShort
 from net.response.ResponseRandomFloat import ResponseRandomFloat
 from net.response.ResponseLogin import ResponseLogin
+from net.response.ResponseChat import ResponseChat
+from net.response.ResponseMove import ResponseMove
+from net.response.ResponsePowerUpUse import ResponsePowerUpUse
+from net.response.ResponsePowerUpPickUp import ResponsePowerUpPickUp
+from net.response.ResponseChangeHealth import ResponseChangeHealth
+from net.response.ResponseResults import ResponseResults
+from net.response.ResponseRankings import ResponseRankings
+from net.response.ResponsePrizes import ResponsePrizes
+from net.response.ResponseCollision import ResponseCollision
+from net.response.ResponseDead import ResponseDead
+from net.response.ResponseReady import ResponseReady
+from net.response.ResponseRenderCharacter import ResponseRenderCharacter
+from net.response.ResponseRemoveUser import ResponseRemoveUser
+
+
 
 class ServerResponseTable:
     """
@@ -24,11 +39,11 @@ class ServerResponseTable:
         self.add(Constants.SMSG_REGISTER, 'ResponseLogin')
         self.add(Constants.SMSG_FORGOT_PASSWORD, 'ResponseLogin')
         self.add(Constants.SMSG_CREATE_CHARACTER,'ResponseLogin')
-        self.add(Constants.SMSG_CHAT, 'ResponseLogin')
-        self.add(Constants.SMSG_MOVE, 'ResponseLogin')
-        self.add(Constants.SMSG_POWER_UP, 'ResponseLogin')
-        self.add(Constants.SMSG_POWER_PICKUP, 'ResponseLogin')
-        self.add(Constants.SMSG_HEALTH, 'ResponseLogin')
+        self.add(Constants.SMSG_CHAT, 'ResponseChat')
+        self.add(Constants.SMSG_MOVE, 'ResponseMove')
+        self.add(Constants.SMSG_POWER_UP, 'ResponsePowerUpUse')
+        self.add(Constants.SMSG_POWER_PICKUP, 'ResponsePowerUpPickUp')
+        self.add(Constants.SMSG_HEALTH, 'ResponseChangeHealth')
         self.add(Constants.SMSG_ENTER_LOBBY, 'ResponseLogin')
         self.add(Constants.SMSG_ENTER_GAME_LOBBY, 'ResponseLogin')
         self.add(Constants.SMSG_ENTER_GAME_NAME, 'ResponseLogin')
@@ -39,14 +54,14 @@ class ServerResponseTable:
         self.add(Constants.SMSG_CAR_PAINT, 'ResponseLogin')
         self.add(Constants.SMSG_CAR_TIRES, 'ResponseLogin')
         self.add(Constants.SMSG_GARAGE_PURCHASE, 'ResponseLogin')
-        self.add(Constants.SMSG_RESULTS, 'ResponseLogin')
-        self.add(Constants.SMSG_RANKINGS, 'ResponseLogin')
-        self.add(Constants.SMSG_PRIZES, 'ResponseLogin')
-        self.add(Constants.SMSG_COLLISION, 'ResponseLogin')
-        self.add(Constants.SMSG_DEAD, 'ResponseLogin')
-        self.add(Constants.SMSG_READY, 'ResponseLogin')
-        self.add(Constants.SMSG_RENDER_CHARACTER, 'ResponseLogin')
-        self.add(Constants.SMSG_REMOVE_CHARACTER, 'ResponseLogin')
+        self.add(Constants.SMSG_RESULTS, 'ResponseResults')
+        self.add(Constants.SMSG_RANKINGS, 'ResponseRankings')
+        self.add(Constants.SMSG_PRIZES, 'ResponsePrizes')
+        self.add(Constants.SMSG_COLLISION, 'ResponseCollision')
+        self.add(Constants.SMSG_DEAD, 'ResponseDead')
+        self.add(Constants.SMSG_READY, 'ResponseReady')
+        self.add(Constants.SMSG_RENDER_CHARACTER, 'ResponseRenderCharacter')
+        self.add(Constants.SMSG_REMOVE_CHARACTER, 'ResponseRemoveUser')
 
     def add(self, constant, name):
         """Map a numeric response code with the name of an existing response module."""
